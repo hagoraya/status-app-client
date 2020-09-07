@@ -9,7 +9,6 @@ import LikeButton from './LikeButton'
 import DeleteButton from './DeleteButton'
 import MyPopup from './../util/MyPopup'
 
-import gql from 'graphql-tag'
 
 function PostCard(props) {
     const { body, createdAt, id, username, likeCount, commentCount, likes } = props.post
@@ -18,9 +17,7 @@ function PostCard(props) {
 
 
 
-    function commentOnPost() {
-        console.log("comment on post")
-    }
+
 
     return (
         <Card fluid>
@@ -44,7 +41,7 @@ function PostCard(props) {
                 <MyPopup
                     content="Comment on post">
 
-                    <Button as='div' labelPosition='right' as={Link} to={`/posts/${id}`}>
+                    <Button labelPosition='right' as={Link} to={`/posts/${id}`}>
                         <Button color='blue' basic>
                             <Icon name='comments' />
 
