@@ -23,7 +23,7 @@ function Home() {
     //  console.log(posts);
 
     return (
-        <Grid columns={3}>
+        <Grid columns={3} >
             <Grid.Row className="pageTitle">
                 <h1>Recent Posts</h1>
             </Grid.Row>
@@ -39,7 +39,7 @@ function Home() {
                         <Transition.Group>
                             {posts &&
                                 posts.map((post) => (
-                                    <Grid.Column key={post.id}>
+                                    <Grid.Column key={post.id} style={{ padding: "0.5rem" }}>
                                         <PostCard post={post} />
                                     </Grid.Column>
 
