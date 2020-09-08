@@ -5,7 +5,9 @@ import { AuthContext } from './../../context/auth'
 
 import PostCard from './../PostCard'
 import PostForm from './../PostForm'
+import Spinner from './../loadingSpinner'
 import { FETCH_POSTS_QUERY } from './../../util/graphql'
+import logo from './../logo.png'
 
 function Home() {
     const { user } = useContext(AuthContext)
@@ -14,7 +16,7 @@ function Home() {
     //getPosts is the object in data containing all our posts. and we alias that as posts
     const { loading, data } = useQuery(FETCH_POSTS_QUERY);
 
-    if (loading) return <div>Loading...</div>;
+    if (loading) return <Spinner />;
     //TODO: Fix not found data later
     if (!data) return <p>Not found</p>
 
@@ -50,6 +52,9 @@ function Home() {
                     )}
 
             </Grid.Row>
+
+
+
         </Grid>
     );
 }

@@ -3,6 +3,8 @@ import { Menu } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
 
 import { AuthContext } from '../context/auth'
+import logo from './logo.png'
+
 
 function NavBar() {
     const { user, logout } = useContext(AuthContext)
@@ -41,6 +43,9 @@ function NavBar() {
                     to="/"
                 />
 
+                <img src={logo} ></img>
+
+
                 <Menu.Menu position='right'>
                     <Menu.Item
                         name='login'
@@ -57,7 +62,8 @@ function NavBar() {
                         to="/register"
                     />
                 </Menu.Menu>
-            </Menu>
+
+            </Menu >
 
         )
 
