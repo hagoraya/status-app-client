@@ -43,7 +43,7 @@ function NavBar() {
                     to="/"
                 />
 
-                <img src={logo} ></img>
+                <img src={logo} alt="Logo"></img>
 
 
                 <Menu.Menu position='right'>

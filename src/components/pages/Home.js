@@ -7,7 +7,6 @@ import PostCard from './../PostCard'
 import PostForm from './../PostForm'
 import Spinner from './../loadingSpinner'
 import { FETCH_POSTS_QUERY } from './../../util/graphql'
-import logo from './../logo.png'
 
 function Home() {
     const { user } = useContext(AuthContext)
